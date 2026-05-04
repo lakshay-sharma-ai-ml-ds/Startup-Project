@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+body { background: #0D1117; color: #E6EDF3; font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0D1117; }
+::-webkit-scrollbar-thumb { background: #30363D; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #F97316; }
+
+.grid-bg {
+  background-image: linear-gradient(rgba(249,115,22,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(249,115,22,0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+.glow-orange { box-shadow: 0 0 30px rgba(249,115,22,0.25); }
+.glow-orange-sm { box-shadow: 0 0 15px rgba(249,115,22,0.2); }
+.text-glow { text-shadow: 0 0 30px rgba(249,115,22,0.5); }
+.glass { background: rgba(22,27,34,0.8); backdrop-filter: blur(12px); border: 1px solid rgba(48,54,61,0.8); }
+.glass-orange { background: rgba(249,115,22,0.08); backdrop-filter: blur(12px); border: 1px solid rgba(249,115,22,0.2); }
+.gradient-text { background: linear-gradient(135deg,#F97316,#FB923C,#FDBA74); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.btn-sheriff { background: linear-gradient(135deg,#F97316,#EA580C); transition: all 0.3s; }
+.btn-sheriff:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(249,115,22,0.4); }
+.status-dot { width: 8px; height: 8px; border-radius: 50%; animation: pulse 2s ease-in-out infinite; }
+.status-dot.green { background: #3FB950; }
+.status-dot.orange { background: #F97316; }
+.status-dot.red { background: #F85149; }
+.status-dot.yellow { background: #D29922; }
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+.scan-overlay { position: fixed; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg,transparent,rgba(249,115,22,0.3),transparent); animation: scan-line 4s linear infinite; pointer-events: none; z-index: 100; }
+@keyframes scan-line { 0% { transform: translateY(0); } 100% { transform: translateY(100vh); } }
+.badge-free { background: rgba(139,148,158,0.15); color: #8B949E; border: 1px solid #30363D; }
+.badge-personal { background: rgba(88,166,255,0.15); color: #58A6FF; border: 1px solid rgba(88,166,255,0.3); }
+.badge-enterprise { background: rgba(249,115,22,0.15); color: #F97316; border: 1px solid rgba(249,115,22,0.3); }
